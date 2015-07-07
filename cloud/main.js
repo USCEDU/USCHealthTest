@@ -60,8 +60,11 @@ function deleteObj(request, response){
 }
 
 function timeDelay(request, response){
+  dt = new Date;
+  console.log('start time' + dt.getSeconds());
   setTimeout(function(){
-    console.log('====timeout====')
+    dt2 = new Date;
+    console.log('====timeout====', dt2.getSeconds());
     response.success('timeout')
   },25000);
 }
